@@ -1,38 +1,229 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  background-color: #161c31;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conatiner-two {
+  width: 40%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  color: white;
+  font-family: 'DynaPuff', cursive;
+  font-size: 2.5em;
+}
+
+label {
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 0.1rem;
+  position: relative;
+}
+
+label svg {
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  font-size: 1.3em;
+  fill: rgb(23, 114, 140);
+}
+
+label input {
+  background-color: #28355e;
+  width: 400px;
+  height: 40px;
+  border: none;
+  text-indent: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2em;
+  outline: none;
   color: white;
+  border-radius: 4px 0 0 4px;
 }
 
-.App-link {
-  color: #61dafb;
+label button {
+  background-color: rgb(23, 114, 140);
+  width: 90px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 0 4px 4px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result {
+  background-color: #28355e;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.detail-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.detail-left {
+  width: 25%;
+  padding-left: 1rem;
+}
+
+.detail-left .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.detail-right {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.detail-username {
+  margin-top: 4px;
+  color: rgb(0, 83, 185);
+  font-size: 1em;
+}
+
+.detail-user-info {
+  background-color: #161c31;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  color: white;
+  font-family: 'DynaPuff', cursive;
+}
+
+.detail-user-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.detail-user-links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.detail-user-links-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.detail-user-links-block a {
+  color: white;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+.history {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.history h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.history ul {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
+}
+
+.history ul li a {
+  color: rgb(0, 83, 185);
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+.delete-button {
+  background-color: rgb(151, 46, 46);
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.empty-card {
+  background-color: #161c31;
+  width: 100%;
+  height: 300px;
+  border: #33488f 4px dotted;
+  border-radius: 4px;
+}
+
+.empty-card div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(131, 130, 130);
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  padding-top: 130px;
 }
